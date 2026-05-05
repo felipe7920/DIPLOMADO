@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #0f5238;
+  --color-primary-container: #2d6a4f;
+  --color-on-primary-container: #a8e7c5;
+  --color-secondary: #53643d;
+  --color-secondary-container: #d4e7b5;
+  --color-on-secondary-container: #586841;
+  --color-tertiary: #634019;
+  --color-tertiary-fixed: #ffdcbd;
+  --color-on-tertiary-fixed: #2c1600;
+  --color-on-tertiary-fixed-variant: #623f18;
+  --color-background: #fafaf4;
+  --color-on-background: #1a1c19;
+  --color-surface: #fafaf4;
+  --color-on-surface: #1a1c19;
+  --color-on-surface-variant: #404943;
+  --color-surface-container: #eeeee9;
+  --color-surface-container-low: #f4f4ee;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #707973;
+  --color-outline-variant: #bfc9c1;
+  --color-primary-fixed: #b1f0ce;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body;
+  }
+  h1, h2, h3, h4 {
+    @apply font-sans;
+  }
+}
+
+.organic-bg {
+  background-image: radial-gradient(circle at 2px 2px, #d4e7b5 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
